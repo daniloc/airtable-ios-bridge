@@ -23,7 +23,8 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
 
 @implementation AirtableBridge
 
-
+#pragma mark -
+#pragma mark Initialization
 
 - (instancetype)initWithBaseId:(NSString *)baseID apiKey:(NSString *)key {
     self = [super init];
@@ -39,6 +40,9 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
 + (instancetype)bridgeWithBaseId:(NSString *)baseID apiKey:(NSString *)key {
     return [[AirtableBridge alloc] initWithBaseId:baseID apiKey:key];
 }
+
+#pragma mark -
+#pragma mark URL and request utility methods
 
 -(NSURL *)baseURL {
     return [[NSURL URLWithString:defaultApiRoot] URLByAppendingPathComponent:self.baseID];
@@ -68,6 +72,8 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
     
     return request;
 }
+# pragma mark -
+# pragma mark List methods
 
 - (NSURLSessionDataTask *)loadTable:(NSString *)tableName
                            atOffset:(NSString *)offset
@@ -159,10 +165,26 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
     return task;
 }
 
+#pragma mark -
+#pragma mark CRUD methods
+
+- (NSURLSessionDataTask *)createRecord:(NSDictionary *)record
+                               inTable:(NSString *)tableName
+                     completionHandler:(void (^)(NSString *newRecordID, NSError *error))handler {
+    
+    NSURLSessionDataTask *task = [self updateRecordID:nil
+                                           withFields:record
+                                              inTable:tableName
+                                    completionHandler:handler];
+    return task;
+    
+    
+}
+
 - (NSURLSessionDataTask *)loadRecordWithID:(NSString *)recordID
                                  tableName:(NSString *)tableName
                          completionHandler:(void (^)(NSDictionary *results, NSError *error))handler {
-   
+    
     NSURL *url = [self.baseURL URLByAppendingPathComponent:tableName];
     url = [url URLByAppendingPathComponent:recordID];
     NSURLRequest *request = [self authorizedRequestWithURL:url];
@@ -187,19 +209,6 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
     
     [task resume];
     return task;
-}
-
-- (NSURLSessionDataTask *)createRecord:(NSDictionary *)record
-                               inTable:(NSString *)tableName
-                     completionHandler:(void (^)(NSString *newRecordID, NSError *error))handler {
-    
-    NSURLSessionDataTask *task = [self updateRecordID:nil
-                                           withFields:record
-                                              inTable:tableName
-                                    completionHandler:handler];
-    return task;
-    
-    
 }
 
 - (NSURLSessionDataTask *)updateRecordID:(NSString *)recordID
