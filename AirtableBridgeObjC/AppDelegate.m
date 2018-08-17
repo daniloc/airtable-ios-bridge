@@ -32,11 +32,34 @@
         //NSLog(@"Results: %@", results);
     }];
     
-    [bridge loadRecordIDs:@[@"reccXuyAu1AHjUXf3", @"recRG9adqAEEFM5gc"] atOffset:nil tableName:@"Science Fiction Properties" viewName:nil completionHandler:^(NSDictionary *results, NSString *offset, NSError *error) {
+    NSString *propertiesTable = @"Science Fiction Properties";
+    
+    [bridge loadRecordIDs:@[@"reccXuyAu1AHjUXf3", @"recRG9adqAEEFM5gc"] atOffset:nil tableName:propertiesTable viewName:nil completionHandler:^(NSDictionary *results, NSString *offset, NSError *error) {
         
         if (error) NSLog(@"Error: %@", error);
         
-        NSLog(@"Results: %@", results);
+        //NSLog(@"Results: %@", results);
+    }];
+    
+    
+    [bridge createRecord:@{@"Name": @"BurritoTown"} inTable:propertiesTable completionHandler:^(NSString *newRecordID, NSError *error) {
+        if (error) NSLog(@"Error: %@", error);
+        
+        NSLog(@"New record: %@", newRecordID);
+        
+        [bridge updateRecordID:newRecordID
+                    withFields:@{@"Notes": @"Burrito"}
+                       inTable:propertiesTable
+             completionHandler:^(NSString *recordID, NSError *error) {
+                 NSLog(@"Record updated: %@", recordID);
+                
+                 [bridge deleteRecord:recordID
+                              inTable:propertiesTable
+                    completionHandler:^(BOOL deletedSuccessfully, NSError *error) {
+                        NSLog(@"Deleted: %@", [NSNumber numberWithBool:deletedSuccessfully]);
+                    }];
+                 
+             }];
     }];
     
     
