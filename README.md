@@ -1,6 +1,6 @@
 # airtable-ios-bridge
 
-An Objective-C wrapper for the Airtable API using NSURLSession and friends.
+An Objective-C wrapper for the Airtable API using `NSURLSession` and friends.
 
 ## Do not use this in a production app.
 
