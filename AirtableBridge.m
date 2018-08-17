@@ -81,12 +81,15 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
                            viewName:(NSString *)viewName
                   completionHandler:(void (^)(NSDictionary *results, NSString *offset, NSError *error))handler {
     
-   return [self loadTable:tableName
-           atOffset:offset
-      filterFormula:nil
-         maxRecords:maxRecords
-           viewName:viewName
-  completionHandler:handler];
+    NSURLSessionDataTask *task = [self loadTable:tableName
+                                        atOffset:offset
+                                   filterFormula:nil
+                                      maxRecords:maxRecords
+                                        viewName:viewName
+                               completionHandler:handler];
+    
+    [task resume];
+    return task;
     
 }
 
@@ -102,9 +105,9 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
     }
     
     NSMutableDictionary *queryItems = @{
-                                 @"maxRecords"  : [NSNumber numberWithInteger:maxRecords].stringValue,
-                                 @"view" : viewName,
-                                 }.mutableCopy;
+                                        @"maxRecords"  : [NSNumber numberWithInteger:maxRecords].stringValue,
+                                        @"view" : viewName,
+                                        }.mutableCopy;
     
     if (offset) {
         queryItems[@"offset"] = offset;
@@ -155,11 +158,11 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
     NSString *filterFormula = [NSString stringWithFormat:@"OR(%@')", joinedRecordIDs];
     
     NSURLSessionDataTask *task = [self loadTable:tableName
-                                  atOffset:nil
-                             filterFormula:filterFormula
-                                maxRecords:100
-                                  viewName:viewName
-                         completionHandler:handler];
+                                        atOffset:nil
+                                   filterFormula:filterFormula
+                                      maxRecords:100
+                                        viewName:viewName
+                               completionHandler:handler];
     
     [task resume];
     return task;
