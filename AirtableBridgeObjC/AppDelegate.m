@@ -56,7 +56,7 @@
                  [bridge deleteRecord:recordID
                               inTable:propertiesTable
                     completionHandler:^(BOOL deletedSuccessfully, NSError *error) {
-                        NSLog(@"Deleted: %@", [NSNumber numberWithBool:deletedSuccessfully]);
+                        NSLog(@"Deleted: %d", deletedSuccessfully);
                     }];
                  
              }];
