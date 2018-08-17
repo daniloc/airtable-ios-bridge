@@ -18,11 +18,13 @@
                            viewName:(NSString *)viewName
                   completionHandler:(void (^)(NSDictionary *results, NSString *offset, NSError *error))handler;
 
-- (NSURLSessionDataTask *)loadRecordIDs:(NSArray *)recordId
-                                 tableName:(NSString *)tableName
-                         completionHandler:(void (^)(NSDictionary *results, NSError *error))handler;
+- (NSURLSessionDataTask *)loadRecordIDs:(NSArray *)recordIDs
+                               atOffset:(NSString *)offset
+                              tableName:(NSString *)tableName
+                               viewName:(NSString *)viewName
+                      completionHandler:(void (^)(NSDictionary *results, NSString *offset, NSError *error))handler;
 
-- (NSURLSessionDataTask *)loadRecordWithId:(NSString *)recordId
+- (NSURLSessionDataTask *)loadRecordWithID:(NSString *)recordID
                                  tableName:(NSString *)tableName
                          completionHandler:(void (^)(NSDictionary *results, NSError *error))handler;
 

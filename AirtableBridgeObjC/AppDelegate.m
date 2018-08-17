@@ -20,12 +20,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    
+    
     AirtableBridge *bridge = [AirtableBridge bridgeWithBaseId:@"appoAITxTMYXNz4Pw" apiKey:AIRTABLE_API_KEY];
+    
     [bridge loadTable:@"AI in Science Fiction" atOffset:nil maxRecords:100 viewName:nil completionHandler:^(NSDictionary *results, NSString *offset, NSError *error) {
-        NSLog(@"Results: %@", results);
+        //NSLog(@"Results: %@", results);
     }];
     
-    [bridge loadRecordWithId:@"recF40hqsTKzqkRbm" tableName:@"AI in Science Fiction" completionHandler:^(NSDictionary *results, NSError *error) {
+    [bridge loadRecordWithID:@"recF40hqsTKzqkRbm" tableName:@"AI in Science Fiction" completionHandler:^(NSDictionary *results, NSError *error) {
+        //NSLog(@"Results: %@", results);
+    }];
+    
+    [bridge loadRecordIDs:@[@"reccXuyAu1AHjUXf3", @"recRG9adqAEEFM5gc"] atOffset:nil tableName:@"Science Fiction Properties" viewName:nil completionHandler:^(NSDictionary *results, NSString *offset, NSError *error) {
+        
+        if (error) NSLog(@"Error: %@", error);
+        
         NSLog(@"Results: %@", results);
     }];
     

@@ -12,11 +12,12 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
 
 @interface AirtableBridge ()
 
-@property (copy) NSString *baseId;
-@property (copy)NSString *apiKey;
+@property (copy) NSString *baseID;
+@property (copy) NSString *apiKey;
 @property (copy) NSString *apiRoot;
+@property (strong) NSURLSession *session;
 
-@property (readonly) NSURL *baseUrl;
+@property (readonly) NSURL *baseURL;
 
 @end
 
@@ -24,27 +25,28 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
 
 
 
-- (instancetype)initWithBaseId:(NSString *)baseId apiKey:(NSString *)key {
+- (instancetype)initWithBaseId:(NSString *)baseID apiKey:(NSString *)key {
     self = [super init];
     if (self) {
-        self.baseId = baseId;
+        self.baseID = baseID;
         self.apiKey = key;
         self.apiRoot = defaultApiRoot;
+        
     }
     return self;
 }
 
-+ (instancetype)bridgeWithBaseId:(NSString *)baseId apiKey:(NSString *)key {
-    return [[AirtableBridge alloc] initWithBaseId:baseId apiKey:key];
++ (instancetype)bridgeWithBaseId:(NSString *)baseID apiKey:(NSString *)key {
+    return [[AirtableBridge alloc] initWithBaseId:baseID apiKey:key];
 }
 
--(NSURL *)baseUrl {
-    return [[NSURL URLWithString:defaultApiRoot] URLByAppendingPathComponent:self.baseId];
+-(NSURL *)baseURL {
+    return [[NSURL URLWithString:defaultApiRoot] URLByAppendingPathComponent:self.baseID];
 }
 
 - (NSURL *)urlForTableName:(NSString *)tableName queryDictionary:(NSDictionary *)queryDictionary {
-    NSURL *tableUrl = [self.baseUrl URLByAppendingPathComponent:tableName];
-    NSURLComponents *components = [NSURLComponents componentsWithURL:tableUrl resolvingAgainstBaseURL:YES];
+    NSURL *tableURL = [self.baseURL URLByAppendingPathComponent:tableName];
+    NSURLComponents *components = [NSURLComponents componentsWithURL:tableURL resolvingAgainstBaseURL:YES];
     
     NSArray *queryItems = @[];
     
@@ -71,6 +73,22 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
                            viewName:(NSString *)viewName
                   completionHandler:(void (^)(NSDictionary *results, NSString *offset, NSError *error))handler {
     
+   return [self loadTable:tableName
+           atOffset:offset
+      filterFormula:nil
+         maxRecords:maxRecords
+           viewName:viewName
+  completionHandler:handler];
+    
+}
+
+- (NSURLSessionDataTask *)loadTable:(NSString *)tableName
+                           atOffset:(NSString *)offset
+                      filterFormula:(NSString *)filterFormula
+                         maxRecords:(NSInteger)maxRecords
+                           viewName:(NSString *)viewName
+                  completionHandler:(void (^)(NSDictionary *results, NSString *offset, NSError *error))handler {
+    
     if (viewName == nil) {
         viewName = @"Grid view";
     }
@@ -84,8 +102,12 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
         queryItems[@"offset"] = offset;
     }
     
-    NSURL *url = [self urlForTableName:tableName queryDictionary:queryItems];
-    NSURLRequest *request = [self authorizedRequestWithURL:url];
+    if (filterFormula) {
+        queryItems[@"filterByFormula"] = filterFormula;
+    }
+    
+    NSURL *URL = [self urlForTableName:tableName queryDictionary:queryItems];
+    NSURLRequest *request = [self authorizedRequestWithURL:URL];
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request
@@ -114,12 +136,30 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
     return task;
 }
 
-- (NSURLSessionDataTask *)loadRecordWithId:(NSString *)recordId
+-(NSURLSessionDataTask *)loadRecordIDs:(NSArray *)recordIDs
+                              atOffset:(NSString *)offset
+                             tableName:(NSString *)tableName
+                              viewName:(NSString *)viewName
+                     completionHandler:(void (^)(NSDictionary *results, NSString *offset, NSError *error))handler {
+    
+    NSString *joinedRecordIDs = [recordIDs componentsJoinedByString:@"',RECORD_ID()='"];
+    joinedRecordIDs = [@"RECORD_ID()='" stringByAppendingString:joinedRecordIDs];
+    NSString *filterFormula = [NSString stringWithFormat:@"OR(%@')", joinedRecordIDs];
+    
+    return [self loadTable:tableName
+                  atOffset:nil
+             filterFormula:filterFormula
+                maxRecords:100
+                  viewName:viewName
+         completionHandler:handler];
+}
+
+- (NSURLSessionDataTask *)loadRecordWithID:(NSString *)recordID
                                  tableName:(NSString *)tableName
                          completionHandler:(void (^)(NSDictionary *results, NSError *error))handler {
    
-    NSURL *url = [self.baseUrl URLByAppendingPathComponent:tableName];
-    url = [url URLByAppendingPathComponent:recordId];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:tableName];
+    url = [url URLByAppendingPathComponent:recordID];
     NSURLRequest *request = [self authorizedRequestWithURL:url];
     
     NSURLSession *session = [NSURLSession sharedSession];
