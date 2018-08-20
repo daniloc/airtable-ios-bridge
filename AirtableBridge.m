@@ -12,8 +12,6 @@ NSString *defaultApiRoot = @"https://api.airtable.com/v0";
 
 @interface AirtableBridge ()
 
-@property (copy) NSString *baseID;
-@property (copy) NSString *apiKey;
 @property (copy) NSString *apiRoot;
 @property (strong) NSURLSession *session;
 

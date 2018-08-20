@@ -10,6 +10,9 @@
 
 @interface AirtableBridge : NSObject
 
+@property (copy) NSString *baseID;
+@property (copy) NSString *apiKey;
+
 + (instancetype)bridgeWithBaseId:(NSString *)baseId apiKey:(NSString *)key;
 
 - (NSURLSessionDataTask *)loadTable:(NSString *)tableName
