@@ -11,9 +11,9 @@
       location = "group:AirtableBridge.m">
    </FileRef>
    <FileRef
-      location = "group:AirtableBridgeSwift/AirtableBridgeSwift.xcodeproj">
+      location = "group:AirtableBridgeObjC/AirtableBridgeObjC.xcodeproj">
    </FileRef>
    <FileRef
-      location = "absolute:/Users/danilo/Documents/AirtableBridgeObjC/AirtableBridgeObjC.xcodeproj">
+      location = "group:AirtableBridgeSwift/AirtableBridgeSwift.xcodeproj">
    </FileRef>
 </Workspace>
