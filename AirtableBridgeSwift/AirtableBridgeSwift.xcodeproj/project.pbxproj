@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F4B7DE2212B1DE20010D191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B7DE1212B1DE20010D191 /* AppDelegate.swift */; };
+		9F4B7DE4212B1DE20010D191 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B7DE3212B1DE20010D191 /* ViewController.swift */; };
+		9F4B7DE7212B1DE20010D191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B7DE5212B1DE20010D191 /* Main.storyboard */; };
+		9F4B7DE9212B1DE80010D191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B7DE8212B1DE80010D191 /* Assets.xcassets */; };
+		9F4B7DEC212B1DE80010D191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B7DEA212B1DE80010D191 /* LaunchScreen.storyboard */; };
+		9F4B7DF7212B1DE80010D191 /* AirtableBridgeSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B7DF6212B1DE80010D191 /* AirtableBridgeSwiftTests.swift */; };
+		9F4B7E10212B1E640010D191 /* AirtableBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B7E0F212B1E640010D191 /* AirtableBridge.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F4B7DF3212B1DE80010D191 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F4B7DD6212B1DE20010D191 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F4B7DDD212B1DE20010D191;
+			remoteInfo = AirtableBridgeSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F4B7DDE212B1DE20010D191 /* AirtableBridgeSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirtableBridgeSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4B7DE1212B1DE20010D191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F4B7DE3212B1DE20010D191 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F4B7DE6212B1DE20010D191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F4B7DE8212B1DE80010D191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F4B7DEB212B1DE80010D191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F4B7DED212B1DE80010D191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4B7DF2212B1DE80010D191 /* AirtableBridgeSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirtableBridgeSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4B7DF6212B1DE80010D191 /* AirtableBridgeSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableBridgeSwiftTests.swift; sourceTree = "<group>"; };
+		9F4B7DF8212B1DE80010D191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4B7E0D212B1E640010D191 /* AirtableBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirtableBridge.h; path = ../AirtableBridge.h; sourceTree = "<group>"; };
+		9F4B7E0E212B1E640010D191 /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIKey.h; path = ../APIKey.h; sourceTree = "<group>"; };
+		9F4B7E0F212B1E640010D191 /* AirtableBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirtableBridge.m; path = ../AirtableBridge.m; sourceTree = "<group>"; };
+		9F4B7E15212B1F300010D191 /* AirtableBridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirtableBridge-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F4B7DDB212B1DE20010D191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4B7DEF212B1DE80010D191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F4B7DD5212B1DE20010D191 = {
+			isa = PBXGroup;
+			children = (
+				9F4B7E0E212B1E640010D191 /* APIKey.h */,
+				9F4B7E15212B1F300010D191 /* AirtableBridge-Bridging-Header.h */,
+				9F4B7E0D212B1E640010D191 /* AirtableBridge.h */,
+				9F4B7E0F212B1E640010D191 /* AirtableBridge.m */,
+				9F4B7DE0212B1DE20010D191 /* AirtableBridgeSwift */,
+				9F4B7DF5212B1DE80010D191 /* AirtableBridgeSwiftTests */,
+				9F4B7DDF212B1DE20010D191 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F4B7DDF212B1DE20010D191 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F4B7DDE212B1DE20010D191 /* AirtableBridgeSwift.app */,
+				9F4B7DF2212B1DE80010D191 /* AirtableBridgeSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F4B7DE0212B1DE20010D191 /* AirtableBridgeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9F4B7DE1212B1DE20010D191 /* AppDelegate.swift */,
+				9F4B7DE3212B1DE20010D191 /* ViewController.swift */,
+				9F4B7DE5212B1DE20010D191 /* Main.storyboard */,
+				9F4B7DE8212B1DE80010D191 /* Assets.xcassets */,
+				9F4B7DEA212B1DE80010D191 /* LaunchScreen.storyboard */,
+				9F4B7DED212B1DE80010D191 /* Info.plist */,
+			);
+			path = AirtableBridgeSwift;
+			sourceTree = "<group>";
+		};
+		9F4B7DF5212B1DE80010D191 /* AirtableBridgeSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F4B7DF6212B1DE80010D191 /* AirtableBridgeSwiftTests.swift */,
+				9F4B7DF8212B1DE80010D191 /* Info.plist */,
+			);
+			path = AirtableBridgeSwiftTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F4B7DDD212B1DE20010D191 /* AirtableBridgeSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4B7DFB212B1DE80010D191 /* Build configuration list for PBXNativeTarget "AirtableBridgeSwift" */;
+			buildPhases = (
+				9F4B7DDA212B1DE20010D191 /* Sources */,
+				9F4B7DDB212B1DE20010D191 /* Frameworks */,
+				9F4B7DDC212B1DE20010D191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirtableBridgeSwift;
+			productName = AirtableBridgeSwift;
+			productReference = 9F4B7DDE212B1DE20010D191 /* AirtableBridgeSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F4B7DF1212B1DE80010D191 /* AirtableBridgeSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4B7DFE212B1DE80010D191 /* Build configuration list for PBXNativeTarget "AirtableBridgeSwiftTests" */;
+			buildPhases = (
+				9F4B7DEE212B1DE80010D191 /* Sources */,
+				9F4B7DEF212B1DE80010D191 /* Frameworks */,
+				9F4B7DF0212B1DE80010D191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F4B7DF4212B1DE80010D191 /* PBXTargetDependency */,
+			);
+			name = AirtableBridgeSwiftTests;
+			productName = AirtableBridgeSwiftTests;
+			productReference = 9F4B7DF2212B1DE80010D191 /* AirtableBridgeSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F4B7DD6212B1DE20010D191 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Danilo Campos";
+				TargetAttributes = {
+					9F4B7DDD212B1DE20010D191 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					9F4B7DF1212B1DE80010D191 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 9F4B7DDD212B1DE20010D191;
+					};
+				};
+			};
+			buildConfigurationList = 9F4B7DD9212B1DE20010D191 /* Build configuration list for PBXProject "AirtableBridgeSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F4B7DD5212B1DE20010D191;
+			productRefGroup = 9F4B7DDF212B1DE20010D191 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F4B7DDD212B1DE20010D191 /* AirtableBridgeSwift */,
+				9F4B7DF1212B1DE80010D191 /* AirtableBridgeSwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F4B7DDC212B1DE20010D191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4B7DEC212B1DE80010D191 /* LaunchScreen.storyboard in Resources */,
+				9F4B7DE9212B1DE80010D191 /* Assets.xcassets in Resources */,
+				9F4B7DE7212B1DE20010D191 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4B7DF0212B1DE80010D191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F4B7DDA212B1DE20010D191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4B7DE4212B1DE20010D191 /* ViewController.swift in Sources */,
+				9F4B7DE2212B1DE20010D191 /* AppDelegate.swift in Sources */,
+				9F4B7E10212B1E640010D191 /* AirtableBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4B7DEE212B1DE80010D191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4B7DF7212B1DE80010D191 /* AirtableBridgeSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F4B7DF4212B1DE80010D191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F4B7DDD212B1DE20010D191 /* AirtableBridgeSwift */;
+			targetProxy = 9F4B7DF3212B1DE80010D191 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F4B7DE5212B1DE20010D191 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F4B7DE6212B1DE20010D191 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F4B7DEA212B1DE80010D191 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F4B7DEB212B1DE80010D191 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F4B7DF9212B1DE80010D191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F4B7DFA212B1DE80010D191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F4B7DFC212B1DE80010D191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirtableBridgeSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = danilocampos.AirtableBridgeSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AirtableBridge-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F4B7DFD212B1DE80010D191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirtableBridgeSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = danilocampos.AirtableBridgeSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AirtableBridge-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F4B7DFF212B1DE80010D191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirtableBridgeSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = danilocampos.AirtableBridgeSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirtableBridgeSwift.app/AirtableBridgeSwift";
+			};
+			name = Debug;
+		};
+		9F4B7E00212B1DE80010D191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirtableBridgeSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = danilocampos.AirtableBridgeSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirtableBridgeSwift.app/AirtableBridgeSwift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F4B7DD9212B1DE20010D191 /* Build configuration list for PBXProject "AirtableBridgeSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4B7DF9212B1DE80010D191 /* Debug */,
+				9F4B7DFA212B1DE80010D191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F4B7DFB212B1DE80010D191 /* Build configuration list for PBXNativeTarget "AirtableBridgeSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4B7DFC212B1DE80010D191 /* Debug */,
+				9F4B7DFD212B1DE80010D191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F4B7DFE212B1DE80010D191 /* Build configuration list for PBXNativeTarget "AirtableBridgeSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4B7DFF212B1DE80010D191 /* Debug */,
+				9F4B7E00212B1DE80010D191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F4B7DD6212B1DE20010D191 /* Project object */;
+}

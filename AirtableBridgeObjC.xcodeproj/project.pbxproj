@@ -15,7 +15,7 @@
 		9F4B7DB02125FEAE0010D191 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B7DAF2125FEAE0010D191 /* main.m */; };
 		9F4B7DBA2125FEAE0010D191 /* AirtableBridgeObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B7DB92125FEAE0010D191 /* AirtableBridgeObjCTests.m */; };
 		9F4B7DC52125FEAE0010D191 /* AirtableBridgeObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B7DC42125FEAE0010D191 /* AirtableBridgeObjCUITests.m */; };
-		9F4B7DD42125FECA0010D191 /* AirtableBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B7DD32125FECA0010D191 /* AirtableBridge.m */; };
+		9F4B7E14212B1E6A0010D191 /* AirtableBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B7E13212B1E6A0010D191 /* AirtableBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +52,9 @@
 		9F4B7DC02125FEAE0010D191 /* AirtableBridgeObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirtableBridgeObjCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4B7DC42125FEAE0010D191 /* AirtableBridgeObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirtableBridgeObjCUITests.m; sourceTree = "<group>"; };
 		9F4B7DC62125FEAE0010D191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F4B7DD22125FECA0010D191 /* AirtableBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirtableBridge.h; sourceTree = "<group>"; };
-		9F4B7DD32125FECA0010D191 /* AirtableBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirtableBridge.m; sourceTree = "<group>"; };
-		9FCCBB5C21272B0E0005B127 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		9F4B7E11212B1E6A0010D191 /* AirtableBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirtableBridge.h; sourceTree = "<group>"; };
+		9F4B7E12212B1E6A0010D191 /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		9F4B7E13212B1E6A0010D191 /* AirtableBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirtableBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +85,9 @@
 		9F4B7D942125FEAC0010D191 = {
 			isa = PBXGroup;
 			children = (
-				9FCCBB5C21272B0E0005B127 /* APIKey.h */,
-				9F4B7DD22125FECA0010D191 /* AirtableBridge.h */,
-				9F4B7DD32125FECA0010D191 /* AirtableBridge.m */,
+				9F4B7E12212B1E6A0010D191 /* APIKey.h */,
+				9F4B7E11212B1E6A0010D191 /* AirtableBridge.h */,
+				9F4B7E13212B1E6A0010D191 /* AirtableBridge.m */,
 				9F4B7D9F2125FEAC0010D191 /* AirtableBridgeObjC */,
 				9F4B7DB82125FEAE0010D191 /* AirtableBridgeObjCTests */,
 				9F4B7DC32125FEAE0010D191 /* AirtableBridgeObjCUITests */,
@@ -269,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F4B7DD42125FECA0010D191 /* AirtableBridge.m in Sources */,
+				9F4B7E14212B1E6A0010D191 /* AirtableBridge.m in Sources */,
 				9F4B7DA52125FEAC0010D191 /* ViewController.m in Sources */,
 				9F4B7DB02125FEAE0010D191 /* main.m in Sources */,
 				9F4B7DA22125FEAC0010D191 /* AppDelegate.m in Sources */,
