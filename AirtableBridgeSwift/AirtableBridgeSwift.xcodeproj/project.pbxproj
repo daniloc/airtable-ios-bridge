@@ -64,8 +64,8 @@
 		9F4B7DD5212B1DE20010D191 = {
 			isa = PBXGroup;
 			children = (
-				9F4B7E0E212B1E640010D191 /* APIKey.h */,
 				9F4B7E15212B1F300010D191 /* AirtableBridge-Bridging-Header.h */,
+				9F4B7E0E212B1E640010D191 /* APIKey.h */,
 				9F4B7E0D212B1E640010D191 /* AirtableBridge.h */,
 				9F4B7E0F212B1E640010D191 /* AirtableBridge.m */,
 				9F4B7DE0212B1DE20010D191 /* AirtableBridgeSwift */,
